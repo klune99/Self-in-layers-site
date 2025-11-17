@@ -1,0 +1,17 @@
+/* Self in Layers – starter stylesheet.
+   You can delete these styles if your assignment requires a blank CSS.
+*/
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;line-height:1.5}
+header,footer,nav,main,aside{padding:1rem}
+header{border-bottom:1px solid #ddd}
+footer{border-top:1px solid #ddd;font-size:.9rem;color:#555}
+nav a{margin-right:1rem;text-decoration:none;color:#333}
+.nav-active{font-weight:700}
+.layout{display:grid;grid-template-columns:1fr;gap:1rem;padding:1rem}
+@media(min-width:900px){.layout{grid-template-columns:3fr 1fr}}
+.img-placeholder{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;border:2px dashed #bbb;color:#888;background:#fafafa}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.meta{font-size:.95rem;color:#444}
+h1{margin:.25rem 0}
+h2{margin:.25rem 0;color:#555;font-weight:600}
