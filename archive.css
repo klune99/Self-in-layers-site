@@ -1,52 +1,20 @@
-/* Center main content text */
-main {
-  text-align: center;
-}
-
-main h1 {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-main h2 {
-  text-align: center;
-  color: #666;
-  font-weight: normal;
-  margin-bottom: 1.5rem;
-}
-
-main p {
-  text-align: center;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1rem;
-}
-
 /* Interactive Cabinet Styles */
 
 /* Container for the cabinet */
 .interactive-cabinet {
-  max-width: 750px;
-  width: 95%;
+  max-width: 600px;
+  width: 90%;
   margin: 2rem auto;
   text-align: center;
-  position: relative;
 }
 
-/* Make the image bigger and responsive */
+/* Make the image responsive */
 .interactive-cabinet img {
   width: 100%;
-  max-width: 750px;
+  max-width: 600px;
   height: auto;
   display: block;
-  margin: 0 auto 1.5rem;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.interactive-cabinet img:hover {
-  transform: scale(1.01);
+  margin: 0 auto 1rem;
 }
 
 /* Drawer links below the image */
@@ -55,8 +23,8 @@ main p {
   margin: 0.5rem;
   padding: 0.75rem 1.5rem;
   background-color: #8B7355;
-  color: white;
-  text-decoration: none;
+  color: white !important;
+  text-decoration: none !important;
   border-radius: 5px;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -65,13 +33,8 @@ main p {
 /* Hover effect for links */
 .drawer-link:hover {
   background-color: #6B5335;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Active/pressed state */
-.drawer-link:active {
-  transform: translateY(0);
+  transform: scale(1.05);
+  text-decoration: none !important;
 }
 
 /* Instruction text styling */
@@ -79,19 +42,5 @@ main p {
   text-align: center;
   font-style: italic;
   color: #666;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .interactive-cabinet {
-    max-width: 90%;
-  }
-  
-  .drawer-link {
-    margin: 0.4rem;
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
+  margin-bottom: 1rem;
 }

@@ -6,6 +6,7 @@
   <title>Skull • Self in Layers</title>
   <meta name="description" content="Self in Layers — a digital anatomy-archive of figure studies with gesture, skeleton, and muscle overlays." />
   <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="skull.css" />
 </head>
 <body>
 <header>
@@ -20,32 +21,127 @@
       <a href="works-cited.html" class="">Works Cited</a>
     </nav>
     
-</header><div class="layout">
+</header>
+
+<div class="layout">
 <main>
   <h1>Skull</h1>
-  <h2>Region index</h2>
+  <h2>Cranial structure studies</h2>
   
-<p>Explore skull studies. Each study includes layered views (gesture → skeleton → muscle) and process notes.</p>
-<div class="grid">
-  <a href="object.html"><div class="img-placeholder">Skull Study 01</div></a>
-  <a href="object.html"><div class="img-placeholder">Skull Study 02</div></a>
-  <a href="object.html"><div class="img-placeholder">Skull Study 03</div></a>
-  <a href="object.html"><div class="img-placeholder">Skull Study 04</div></a>
-</div>
-
-</main><aside>
+  <p class="intro-text">Explore skull studies documenting the progression from gesture observation through skeletal mapping to understanding cranial landmarks. Each study preserves the marks of observation and anatomical investigation.</p>
   
-<h3>Skull Metadata</h3>
-<ul>
-  <li>Muscles involved (placeholder)</li>
-  <li>Skeletal landmarks (placeholder)</li>
-  <li>Proportion notes (placeholder)</li>
-  <li><a href="#">Full anatomical notes</a></li>
-</ul>
+  <section class="layer-viewer">
+    <h3>Featured Study: Skull Anatomical Mapping</h3>
+    <div class="layer-controls">
+      <button class="layer-btn active" onclick="showLayer('front')">Front View</button>
+      <button class="layer-btn" onclick="showLayer('side')">Side View</button>
+      <button class="layer-btn" onclick="showLayer('selfportrait')">Self Portrait Study</button>
+    </div>
+    <div class="layer-display" id="layerDisplay">
+      <img src="images/Hayes_skull-front.jpg" alt="Skull study - front view with anatomical landmarks" id="layerImage">
+    </div>
+    <p style="margin-top: 1rem; color: #666; font-style: italic;">Use the buttons above to explore different views and anatomical layers</p>
+  </section>
+  
+  <h2>Study Collection</h2>
+  
+  <div class="skull-studies">
+    <div class="study-card">
+      <img src="images/wk2.jpeg" class="study-image" alt="Mass gestural drawing of skull">
+      <div class="study-title">Skull Study 01: Mass Gestural Drawing</div>
+      <div class="study-meta">
+        Medium: Red conte on white paper<br>
+        Focus: Mapping basic shapes, front view
+      </div>
+    </div>
+    
+    <div class="study-card">
+      <img src="images/wk4-1.jpeg" class="study-image" alt="Gestural skull drawing, front view">
+      <div class="study-title">Skull Study 02: Gestural Continuation</div>
+      <div class="study-meta">
+        Medium: Red & black conte on white paper<br>
+        Focus: Front view gestural drawing
+      </div>
+    </div>
+    
+    <div class="study-card">
+      <img src="images/wk4-2.jpeg" class="study-image" alt="Gestural skull drawing, back view">
+      <div class="study-title">Skull Study 03: Back View Gesture</div>
+      <div class="study-meta">
+        Medium: Red & black conte on white paper<br>
+        Focus: Back view gestural drawing
+      </div>
+    </div>
+    
+    <div class="study-card">
+      <img src="images/Front-skull.png" class="study-image" alt="Skull overlay on head, front view">
+      <div class="study-title">Skull Study 04: Front Overlay</div>
+      <div class="study-meta">
+        Medium: Blue oil pastel & white acrylic on brown paper<br>
+        Focus: Skull overlayed on head, front view
+      </div>
+    </div>
+    
+    <div class="study-card">
+      <img src="images/Back-skull.png" class="study-image" alt="Skull overlay on head, back view">
+      <div class="study-title">Skull Study 05: Back Overlay</div>
+      <div class="study-meta">
+        Medium: Blue oil pastel & white acrylic on brown paper<br>
+        Focus: Skull overlayed on head, back view
+      </div>
+    </div>
+  </div>
 
-</aside></div>
+</main>
+
+
+  <h3>Related Studies</h3>
+  <ul>
+    <li><a href="back.html">Back Studies</a></li>
+    <li><a href="torso.html">Torso Studies</a></li>
+    <li><a href="hands.html">Hand Studies</a></li>
+  </ul>
+  
+
 <footer>
   <div>© 2025 Self in Layers</div>
+</footer>
+
+<script>
+// Layer viewer functionality
+const layerImages = {
+  'front': 'images/Hayes_skull-front.jpg',
+  'side': 'images/Hayes_skull-side.jpg',
+  'selfportrait': 'images/Self-portrait.jpeg'
+};
+
+function showLayer(layerType) {
+  const image = document.getElementById('layerImage');
+  const buttons = document.querySelectorAll('.layer-btn');
   
-</footer></body>
+  // Update image
+  image.src = layerImages[layerType];
+  
+  // Update active button
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  // Add fade effect
+  image.style.opacity = '0';
+  setTimeout(() => {
+    image.style.transition = 'opacity 0.3s ease';
+    image.style.opacity = '1';
+  }, 50);
+}
+
+// Add hover effect to study cards
+document.querySelectorAll('.study-card').forEach(card => {
+  card.addEventListener('click', function() {
+    // Could link to individual study pages
+    console.log('Study card clicked:', this.querySelector('.study-title').textContent);
+  });
+});
+</script>
+
+</body>
 </html>
