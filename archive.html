@@ -6,6 +6,7 @@
   <title>Anatomy Archive • Self in Layers</title>
   <meta name="description" content="Self in Layers — a digital anatomy-archive of figure studies with gesture, skeleton, and muscle overlays." />
   <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="archive.css" />
 </head>
 <body>
 <header>
@@ -20,21 +21,77 @@
       <a href="works-cited.html" class="">Works Cited</a>
     </nav>
     
-</header><div class="layout">
+</header>
+<div class="layout">
 <main>
   <h1>Anatomy Archive</h1>
   <h2>Browse by body region</h2>
   
-<p>The Anatomy Archive is organized by body region. Enter a region to view studies and transition through drawing stages.</p>
-<div class="grid">
-  <a href="torso.html"><div class="img-placeholder">Torso</div></a>
-  <a href="skull.html"><div class="img-placeholder">Skull</div></a>
-  <a href="hands.html"><div class="img-placeholder">Hands</div></a>
-  <a href="arms.html"><div class="img-placeholder">Arms</div></a>
-  <a href="back.html"><div class="img-placeholder">Back</div></a>
-</div>
+  <p>The Anatomy Archive is organized by body region. Enter a region to view studies and transition through drawing stages.</p>
+  
+  <p class="cabinet-instruction">Click on a drawer to explore that body region</p>
+  
+  <div class="interactive-cabinet">
+    <img src="Cabinet/File-1.png" alt="Filing cabinet with anatomical regions" usemap="#cabinet-map" />
+    
+    <map name="cabinet-map">
+      <!-- LEFT COLUMN -->
+      <!-- Skull - top left drawer (first drawer) -->
+      <area shape="rect" coords="50,35,510,150" href="skull.html" alt="Skull" title="Skull">
+      
+      <!-- Second left drawer (empty) -->
+      <!-- <area shape="rect" coords="50,165,510,280" href="#" alt="Empty" title="Empty"> -->
+      
+      <!-- Arms - third left drawer -->
+      <area shape="rect" coords="50,295,510,410" href="arms.html" alt="Arms" title="Arms">
+      
+      <!-- Fourth left drawer (empty) -->
+      <!-- <area shape="rect" coords="50,555,510,670" href="#" alt="Empty" title="Empty"> -->
+      
+      <!-- Fifth left drawer (empty) -->
+      <!-- <area shape="rect" coords="50,685,510,800" href="#" alt="Empty" title="Empty"> -->
+      
+      <!-- Sixth left drawer (empty) -->
+      <!-- <area shape="rect" coords="50,815,510,930" href="#" alt="Empty" title="Empty"> -->
+      
+      <!-- RIGHT COLUMN -->
+      <!-- First right drawer (empty) -->
+      <!-- <area shape="rect" coords="540,35,1000,150" href="#" alt="Empty" title="Empty"> -->
+      
+      <!-- Torso - second right drawer -->
+      <area shape="rect" coords="540,165,1000,280" href="torso.html" alt="Torso" title="Torso">
+      
+      <!-- Third right drawer (empty) -->
+      <!-- <area shape="rect" coords="540,295,1000,410" href="#" alt="Empty" title="Empty"> -->
+      
+      <!-- Hands - fourth right drawer -->
+      <area shape="rect" coords="540,425,1000,540" href="hands.html" alt="Hands" title="Hands">
+      
+      <!-- Fifth right drawer (empty) -->
+      <!-- <area shape="rect" coords="540,685,1000,800" href="#" alt="Empty" title="Empty"> -->
+      
+      <!-- Back - sixth right drawer (bottom) -->
+      <area shape="rect" coords="540,555,1000,670" href="back.html" alt="Back" title="Back">
+    </map>
+    
+    <!-- Skull - top left -->
+    <a href="skull.html" class="drawer-link">Skull</a>
+    
+    <!-- Arms - third left -->
+    <a href="arms.html" class="drawer-link">Arms</a>
+    
+    <!-- Torso - second right -->
+    <a href="torso.html" class="drawer-link">Torso</a>
+    
+    <!-- Hands - fourth right -->
+    <a href="hands.html" class="drawer-link">Hands</a>
+    
+    <!-- Back - bottom right -->
+    <a href="back.html" class="drawer-link">Back</a>
+  </div>
 
-</main><aside>
+</main>
+<aside>
   
 <h3>Filters</h3>
 <ul>
@@ -43,9 +100,11 @@
   <li><button>By Layer Type</button></li>
 </ul>
 
-</aside></div>
+</aside>
+</div>
 <footer>
   <div>© 2025 Self in Layers</div>
   
-</footer></body>
+</footer>
+</body>
 </html>

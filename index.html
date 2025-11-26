@@ -1,71 +1,83 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home • Self in Layers</title>
-  <meta name="description" content="Self in Layers — a digital anatomy-archive of figure studies with gesture, skeleton, and muscle overlays." />
-  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
 <header>
   <div class="site-id"><strong>Self in Layers</strong></div>
-  
-    <nav aria-label="Primary">
-      <a href="index.html" class="nav-active">Home</a>
-      <a href="archive.html" class="">Anatomy Archive</a>
-      <a href="cabinet.html" class="">Cabinet of Anatomy</a>
-      <a href="timeline.html" class="">Timeline</a>
-      <a href="about.html" class="">About</a>
-      <a href="works-cited.html" class="">Works Cited</a>
-    </nav>
-    
-</header><div class="layout">
+  <nav>
+    <a href="index.html" class="nav-active">Home</a>
+    <a href="archive.html">Anatomy Archive</a>
+    <a href="cabinet.html">Cabinet of Anatomy</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="about.html">About</a>
+    <a href="works-cited.html">Works Cited</a>
+  </nav>
+</header>
+
 <main>
   <h1>Self in Layers</h1>
-  <h2>A digital anatomy‑archive & drawing study</h2>
-  
-<section aria-label="Hero">
-  <div class="img-placeholder">Hero Image — Layered anatomy drawing</div>
-</section>
-<section aria-label="Intro">
-  <p>Self in Layers is a digital anatomy-archive that documents figure studies through stages of observation — gesture → skeletal map → muscle overlay — preserving process marks and research notes.</p>
-</section>
-<section aria-label="Body Regions" class="grid">
-  <a href="torso.html" class="card">
-    <div class="img-placeholder">Torso</div>
-    <div class="meta"><strong>Torso</strong><br/>Studies & overlays</div>
-  </a>
-  <a href="skull.html" class="card">
-    <div class="img-placeholder">Skull</div>
-    <div class="meta"><strong>Skull</strong><br/>Studies & overlays</div>
-  </a>
-  <a href="hands.html" class="card">
-    <div class="img-placeholder">Hands</div>
-    <div class="meta"><strong>Hands</strong><br/>Studies & overlays</div>
-  </a>
-  <a href="arms.html" class="card">
-    <div class="img-placeholder">Arms</div>
-    <div class="meta"><strong>Arms</strong><br/>Studies & overlays</div>
-  </a>
-  <a href="back.html" class="card">
-    <div class="img-placeholder">Back</div>
-    <div class="meta"><strong>Back</strong><br/>Studies & overlays</div>
-  </a>
-</section>
+  <h2>A digital anatomy-archive & drawing study</h2>
 
-</main><aside>
-  
-    <h3>Quick Links</h3>
-    <ul>
-      <li><a href='archive.html'>Browse Anatomy Archive</a></li>
-      <li><a href='cabinet.html'>Cabinet of Anatomy</a></li>
-      <li><a href='timeline.html'>Timeline of Study</a></li>
-    </ul>
-    
-</aside></div>
+  <section class="gallery-freeform">
+    <img src="images/front.jpg" alt="Front view" class="draggable-item">
+    <img src="images/back.jpg" alt="Back view" class="draggable-item">
+  </section>
+
+  <p class="intro">Self in Layers is a digital anatomy-archive that documents figure studies through stages of observation — gesture → skeletal map → muscle overlay — preserving process marks and research notes.</p>
+</main>
+
 <footer>
-  <div>© 2025 Self in Layers</div>
+  <div>© 2025 Self in Layers • For course submission</div>
+</footer>
+
+<script>
+  const items = document.querySelectorAll('.draggable-item');
   
-</footer></body>
+  items.forEach((item, index) => {
+    // Set initial positions
+    if (index === 0) {
+      item.style.left = '8%';
+      item.style.top = '10%';
+    } else {
+      item.style.left = '52%';
+      item.style.top = '15%';
+    }
+    
+    let isDragging = false;
+    let offsetX = 0;
+    let offsetY = 0;
+    
+    item.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      const rect = item.getBoundingClientRect();
+      offsetX = e.clientX - rect.left;
+      offsetY = e.clientY - rect.top;
+      item.style.zIndex = Date.now();
+      e.preventDefault();
+    });
+    
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      
+      const container = item.parentElement.getBoundingClientRect();
+      let x = e.clientX - container.left - offsetX;
+      let y = e.clientY - container.top - offsetY;
+      
+      item.style.left = x + 'px';
+      item.style.top = y + 'px';
+    });
+    
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+  });
+</script>
+
+</body>
 </html>
