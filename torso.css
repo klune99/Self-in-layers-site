@@ -15,19 +15,84 @@
   border: 1px solid #ddd;
 }
 
-.layer-display {
+/* Layer Controls - Button Row */
+.layer-controls {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.layer-btn {
+  display: block;
+  background-color: #8B7355;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.layer-btn:hover {
+  background-color: #6B5335;
+}
+
+.layer-instruction {
+  font-style: italic;
+  color: #666;
+  margin-top: 1rem;
+}
+
+/* Layer Container */
+.layer-container {
   background: white;
   padding: 1rem;
   border: 1px solid #ddd;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.layer-display img {
+/* All layers hidden and stacked */
+.layer {
+  display: none;
+  position: absolute;
+  gap: 1rem;
+}
+
+/* Show front view by default (when no hash in URL) */
+#front {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+/* When any layer is targeted, show it */
+#front:target,
+#back:target,
+#featured:target {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+/* When back or featured is targeted, hide front */
+#back:target ~ #front,
+#featured:target ~ #front {
+  display: none;
+}
+
+.layer img {
   max-width: 48%;
+  max-height: 550px;
   height: auto;
+}
+
+/* Single image layers get full width */
+#front img,
+#back img {
+  max-width: 100%;
 }
 
 /* Study Collection Grid */
