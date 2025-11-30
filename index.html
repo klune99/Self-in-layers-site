@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home • Self in Layers</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
@@ -25,59 +26,46 @@
   <h2>A digital anatomy-archive & drawing study</h2>
 
   <section class="gallery-freeform">
-    <img src="images/front.jpg" alt="Front view" class="draggable-item">
-    <img src="images/back.jpg" alt="Back view" class="draggable-item">
+    <!-- Front Image with Lightbox -->
+    <div class="gallery-item-wrapper">
+      <label for="lightbox-front">
+        <img src="images/Front.jpg" alt="Front view" class="gallery-item gallery-item-left">
+      </label>
+    </div>
+    
+    <!-- Back Image with Lightbox -->
+    <div class="gallery-item-wrapper">
+      <label for="lightbox-back">
+        <img src="images/Back.jpg" alt="Back view" class="gallery-item gallery-item-right">
+      </label>
+    </div>
   </section>
 
   <p class="intro">Self in Layers is a digital anatomy-archive that documents figure studies through stages of observation — gesture → skeletal map → muscle overlay — preserving process marks and research notes.</p>
 </main>
 
+<!-- Hidden checkboxes for lightbox -->
+<input type="checkbox" id="lightbox-front" class="lightbox-toggle">
+<div class="lightbox">
+  <label for="lightbox-front" class="lightbox-close"></label>
+  <div class="lightbox-content">
+    <img src="images/Front.jpg" alt="Front view enlarged">
+    <label for="lightbox-front" class="lightbox-close-btn">&times;</label>
+  </div>
+</div>
+
+<input type="checkbox" id="lightbox-back" class="lightbox-toggle">
+<div class="lightbox">
+  <label for="lightbox-back" class="lightbox-close"></label>
+  <div class="lightbox-content">
+    <img src="images/Back.jpg" alt="Back view enlarged">
+    <label for="lightbox-back" class="lightbox-close-btn">&times;</label>
+  </div>
+</div>
+
 <footer>
   <div>© 2025 Self in Layers</div>
 </footer>
-
-<script>
-  const items = document.querySelectorAll('.draggable-item');
-  
-  items.forEach((item, index) => {
-    // Set initial positions
-    if (index === 0) {
-      item.style.left = '8%';
-      item.style.top = '10%';
-    } else {
-      item.style.left = '52%';
-      item.style.top = '15%';
-    }
-    
-    let isDragging = false;
-    let offsetX = 0;
-    let offsetY = 0;
-    
-    item.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      const rect = item.getBoundingClientRect();
-      offsetX = e.clientX - rect.left;
-      offsetY = e.clientY - rect.top;
-      item.style.zIndex = Date.now();
-      e.preventDefault();
-    });
-    
-    document.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
-      
-      const container = item.parentElement.getBoundingClientRect();
-      let x = e.clientX - container.left - offsetX;
-      let y = e.clientY - container.top - offsetY;
-      
-      item.style.left = x + 'px';
-      item.style.top = y + 'px';
-    });
-    
-    document.addEventListener('mouseup', () => {
-      isDragging = false;
-    });
-  });
-</script>
 
 </body>
 </html>

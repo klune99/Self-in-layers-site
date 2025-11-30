@@ -1,46 +1,151 @@
+/* Center main content text */
+main {
+  text-align: center;
+}
+
+main h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+main h2 {
+  text-align: center;
+  color: #666;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+main p {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
 /* Interactive Cabinet Styles */
 
-/* Container for the cabinet */
 .interactive-cabinet {
-  max-width: 600px;
-  width: 90%;
+  max-width: 750px;
+  width: 95%;
   margin: 2rem auto;
   text-align: center;
 }
 
-/* Make the image responsive */
-.interactive-cabinet img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  display: block;
-  margin: 0 auto 1rem;
+.cabinet-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
 }
 
-/* Drawer links below the image */
+.cabinet-container img {
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+  display: block;
+}
+
+/* Clickable drawer overlays */
+.drawer-overlay {
+  position: absolute;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.drawer-overlay:hover {
+  background-color: rgba(139, 115, 85, 0.25);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* LEFT COLUMN - Full drawer areas */
+
+/* Torso - second left drawer */
+.torso-overlay {
+  left: 3%;
+  top: 34%;
+  width: 45%;
+  height: 22%;
+}
+
+/* Legs - third left drawer */
+.legs-overlay {
+  left: 3%;
+  top: 66%;
+  width: 45%;
+  height: 22%;
+}
+
+/* RIGHT COLUMN - Full drawer areas */
+
+/* Skull - first right drawer */
+.skull-overlay {
+  left: 52%;
+  top: 2%;
+  width: 45%;
+  height: 22%;
+}
+
+/* Back - second right drawer */
+.back-overlay {
+  left: 52%;
+  top: 34%;
+  width: 45%;
+  height: 22%;
+}
+
+/* Arms - third right drawer */
+.arms-overlay {
+  left: 52%;
+  top: 66%;
+  width: 45%;
+  height: 22%;
+}
+
+/* Drawer links container */
+.drawer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
 .drawer-link {
   display: inline-block;
-  margin: 0.5rem;
   padding: 0.75rem 1.5rem;
   background-color: #8B7355;
-  color: white !important;
-  text-decoration: none !important;
+  color: white;
+  text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
-/* Hover effect for links */
 .drawer-link:hover {
   background-color: #6B5335;
-  transform: scale(1.05);
-  text-decoration: none !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Instruction text styling */
+.drawer-link:active {
+  transform: translateY(0);
+}
+
 .cabinet-instruction {
   text-align: center;
   font-style: italic;
   color: #666;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .interactive-cabinet {
+    max-width: 90%;
+  }
+  
+  .drawer-link {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
 }
