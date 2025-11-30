@@ -32,23 +32,24 @@
   <!-- Featured Study -->
   <section class="layer-viewer">
     <h3>Featured Study: Back Anatomical Mapping</h3>
+    
+    <!-- Radio buttons outside the controls div for CSS sibling selector to work -->
+    <input type="radio" name="back-layer" id="back-skeletal" class="layer-radio" checked>
+    <input type="radio" name="back-layer" id="back-muscle" class="layer-radio">
+    <input type="radio" name="back-layer" id="back-both" class="layer-radio">
+    
     <div class="layer-controls">
-      <a href="#skeletal" class="layer-btn">Skeletal</a>
-      <a href="#muscle" class="layer-btn">Muscle</a>
-      <a href="#both" class="layer-btn">Both</a>
+      <label for="back-skeletal" class="layer-btn">Skeletal</label>
+      <label for="back-muscle" class="layer-btn">Muscle</label>
+      <label for="back-both" class="layer-btn">Both</label>
     </div>
-   <div class="layer-container">
-  <div id="muscle" class="layer">
-    <img src="images/IMG_77192.png" alt="Back muscle study" />
-  </div>
-  <div id="both" class="layer">
-    <img src="images/IMG_77102.png" alt="Back skeletal and muscle overlay" />
-  </div>
-  <div id="skeletal" class="layer">
-    <img src="images/IMG_76912.png" alt="Back skeletal overlay" />
-  </div>
-</div>
-    <p class="layer-instruction">Click the buttons above to explore different views</p>
+    
+    <div class="layer-display">
+      <img src="images/IMG_76912.png" alt="Back skeletal overlay" class="layer-img layer-skeletal">
+      <img src="images/IMG_77192.png" alt="Back muscle study" class="layer-img layer-muscle">
+      <img src="images/IMG_77102.png" alt="Back skeletal and muscle overlay" class="layer-img layer-both">
+    </div>
+    <p class="layer-caption">Use the buttons above to explore different views</p>
   </section>
 
   <!-- Study Collection -->
@@ -102,6 +103,7 @@
   </div>
 
 </main>
+
 <aside>
   
 <h3>Back Metadata</h3>
@@ -115,20 +117,14 @@
 <h3>Proportion Notes</h3>
 <p>The back spans from the base of the skull to the pelvis. The scapulae are positioned between ribs 2-7.</p>
 
-<h3>Related Regions</h3>
-<ul>
-  <li><a href="torso.html">Torso</a></li>
-  <li><a href="arms.html">Arms</a></li>
-  <li><a href="skull.html">Skull</a></li>
-</ul>
-
 <a href="archive.html" class="back-link">← Back to Archive</a>
 
 </aside>
 </div>
+
 <footer>
   <div>© 2025 Self in Layers</div>
-  
 </footer>
+
 </body>
 </html>

@@ -1,112 +1,24 @@
-/* Back Page Styles */
+/* Back Page Specific Styles */
 
-.intro-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 2rem;
-}
-
-/* Featured Study */
-.layer-viewer {
-  background: #f5f5f5;
-  padding: 2rem;
-  margin: 2rem 0;
-  border: 1px solid #ddd;
-}
-
-.layer-viewer h3 {
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-
-/* Layer Controls - Button Row */
-.layer-controls {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.layer-btn {
-  display: block;
-  background-color: #8B7355;
-  color: white;
-  text-decoration: none;
-  padding: 12px 24px;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-.layer-btn:hover {
-  background-color: #6B5335;
-}
-
-.layer-instruction {
-  font-style: italic;
-  color: #666;
-  margin-top: 1rem;
-}
-
-/* Layer Container */
-.layer-container {
-  background: white;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  min-height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-/* All layers hidden by default */
-.layer {
-  display: none;
-  justify-content: center;
-}
-
-/* Show skeletal view by default */
-#skeletal {
-  display: flex;
-}
-
-/* When a layer is targeted, show it */
-#skeletal:target,
-#muscle:target,
-#both:target {
-  display: flex;
-}
-
-/* When muscle is targeted, hide skeletal */
-#muscle:target ~ #skeletal {
-  display: none;
-}
-
-/* When both is targeted, hide skeletal */
-#both:target ~ #skeletal {
-  display: none;
-}
-
-/* Single image per layer */
-.layer img {
-  max-width: 100%;
-  max-height: 550px;
-  height: auto;
-}
-
-/* Study Collection Grid */
 .back-studies {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin: 2rem 0;
 }
 
 .study-card {
-  flex: 1 0 280px;
   background: #fafafa;
   border: 1px solid #ddd;
   padding: 1rem;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.study-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .study-image {
@@ -116,6 +28,7 @@
   background: white;
   border: 1px solid #eee;
   margin-bottom: 1rem;
+  flex-shrink: 0;
 }
 
 .study-title {
@@ -129,7 +42,99 @@
   color: #666;
 }
 
-/* Sidebar */
+.layer-viewer {
+  background: #f5f5f5;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #ddd;
+}
+
+.layer-viewer h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Pure CSS Layer Controls */
+.layer-radio {
+  display: none;
+}
+
+.layer-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.layer-btn {
+  padding: 0.75rem 1.5rem;
+  background: #8B7355;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.layer-btn:hover {
+  background: #6B5335;
+}
+
+/* Active state for radio buttons */
+#back-skeletal:checked ~ .layer-controls label[for="back-skeletal"],
+#back-muscle:checked ~ .layer-controls label[for="back-muscle"],
+#back-both:checked ~ .layer-controls label[for="back-both"] {
+  background: #4a3320;
+}
+
+.layer-display {
+  min-height: 400px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.layer-img {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  display: none;
+  position: absolute;
+}
+
+/* Show/hide layers based on radio selection */
+#back-skeletal:checked ~ .layer-display .layer-skeletal {
+  display: block;
+  position: relative;
+}
+
+#back-muscle:checked ~ .layer-display .layer-muscle {
+  display: block;
+  position: relative;
+}
+
+#back-both:checked ~ .layer-display .layer-both {
+  display: block;
+  position: relative;
+}
+
+.layer-caption {
+  margin-top: 1rem;
+  color: #666;
+  font-style: italic;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Sidebar Styles */
 aside h3 {
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
@@ -159,17 +164,17 @@ aside a:hover {
   text-decoration: underline;
 }
 
-.back-link {
+a.back-link {
   display: inline-block;
   margin-top: 2rem;
   padding: 0.75rem 1.5rem;
   background-color: #8B7355;
-  color: white;
+  color: white !important;
   border-radius: 5px;
   font-weight: bold;
 }
 
-.back-link:hover {
+a.back-link:hover {
   background-color: #6B5335;
   text-decoration: none;
 }

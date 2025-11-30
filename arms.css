@@ -133,3 +133,48 @@
   color: #555;
   margin-bottom: 2rem;
 }
+
+/* Sidebar Styles */
+aside h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #8B7355;
+}
+
+aside ul {
+  padding-left: 1.2rem;
+}
+
+aside ul li {
+  margin-bottom: 0.4rem;
+}
+
+aside p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+aside a {
+  color: #8B7355;
+  text-decoration: none;
+}
+
+aside a:hover {
+  text-decoration: underline;
+}
+
+a.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #8B7355;
+  color: white !important;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+a.back-link:hover {
+  background-color: #6B5335;
+  text-decoration: none;
+}
