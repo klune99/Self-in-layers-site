@@ -1,0 +1,146 @@
+/* ===== ARCHIVE PAGE STYLES ===== */
+
+/* MAIN CONTENT */
+main {
+  text-align: center;
+}
+
+main h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+main h2 {
+  text-align: center;
+  color: #666;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+main p {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.cabinet-instruction {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* INTERACTIVE CABINET */
+.interactive-cabinet {
+  max-width: 750px;
+  width: 95%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.cabinet-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.cabinet-container img {
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+  display: block;
+}
+
+/* DRAWER OVERLAYS */
+.drawer-overlay {
+  position: absolute;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.drawer-overlay:hover {
+  background-color: rgba(139, 115, 85, 0.25);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* LEFT COLUMN DRAWERS */
+.torso-overlay {
+  left: 3%;
+  top: 34%;
+  width: 45%;
+  height: 22%;
+}
+
+.legs-overlay {
+  left: 3%;
+  top: 66%;
+  width: 45%;
+  height: 22%;
+}
+
+/* RIGHT COLUMN DRAWERS */
+.skull-overlay {
+  left: 52%;
+  top: 2%;
+  width: 45%;
+  height: 22%;
+}
+
+.back-overlay {
+  left: 52%;
+  top: 34%;
+  width: 45%;
+  height: 22%;
+}
+
+.arms-overlay {
+  left: 52%;
+  top: 66%;
+  width: 45%;
+  height: 22%;
+}
+
+/* DRAWER LINKS */
+.drawer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.drawer-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #8B7355;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.drawer-link:hover {
+  background-color: #6B5335;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.drawer-link:active {
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .interactive-cabinet {
+    max-width: 90%;
+  }
+  
+  .drawer-link {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

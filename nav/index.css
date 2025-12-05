@@ -1,0 +1,112 @@
+/* ===== INDEX PAGE STYLES ===== */
+
+/* GALLERY */
+.gallery-freeform {
+  position: relative;
+  min-height: 500px;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.gallery-item-wrapper {
+  cursor: pointer;
+}
+
+.gallery-item {
+  max-width: 400px;
+  max-height: 500px;
+  object-fit: contain;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.gallery-item-left {
+  transform: rotate(-2deg);
+}
+
+.gallery-item-right {
+  transform: rotate(2deg);
+}
+
+.gallery-item-left:hover {
+  transform: rotate(-2deg) scale(1.02);
+}
+
+.gallery-item-right:hover {
+  transform: rotate(2deg) scale(1.02);
+}
+
+/* LIGHTBOX */
+.lightbox-toggle {
+  display: none;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-toggle:checked + .lightbox {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  z-index: 1001;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* LIGHTBOX CLOSE BUTTON */
+.lightbox-close-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.lightbox-close-btn:hover {
+  color: #ccc;
+}
