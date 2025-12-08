@@ -1,0 +1,143 @@
+/* ===== CABINET PAGE STYLES ===== */
+
+/* MAIN CONTENT */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+main h1 {
+  margin-bottom: 0.5rem;
+}
+
+main h2 {
+  color: #666;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+/* INTERACTIVE CABINET */
+.interactive-cabinet {
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.cabinet-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.cabinet-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* DRAWER OVERLAYS */
+.drawer-overlay {
+  position: absolute;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.drawer-overlay:hover {
+  background-color: rgba(139, 115, 85, 0.3);
+}
+
+/* Row 1 */
+.smudge-overlay {
+  top: 3%;
+  left: 3%;
+  width: 45%;
+  height: 28%;
+}
+
+.paper-overlay {
+  top: 3%;
+  left: 52%;
+  width: 45%;
+  height: 28%;
+}
+
+/* Row 2 */
+.lines-overlay {
+  top: 35%;
+  left: 3%;
+  width: 45%;
+  height: 28%;
+}
+
+.tape-overlay {
+  top: 35%;
+  left: 52%;
+  width: 45%;
+  height: 28%;
+}
+
+/* Row 3 */
+.residue-overlay {
+  top: 67%;
+  left: 3%;
+  width: 45%;
+  height: 28%;
+}
+
+.designs-overlay {
+  top: 67%;
+  left: 52%;
+  width: 45%;
+  height: 28%;
+}
+
+/* DRAWER LINKS (BUTTONS) */
+.drawer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.drawer-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #8B7355;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.drawer-link:hover {
+  background-color: #6B5335;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .interactive-cabinet {
+    max-width: 95%;
+  }
+
+  .drawer-links {
+    gap: 0.5rem;
+  }
+
+  .drawer-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

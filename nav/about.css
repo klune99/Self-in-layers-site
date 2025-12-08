@@ -1,0 +1,80 @@
+/* ===== ABOUT PAGE STYLES ===== */
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+main h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+main h2 {
+  text-align: center;
+  color: #666;
+  font-weight: normal;
+  margin-bottom: 3rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.about-section {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.about-section h3 {
+  color: #8B7355;
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+}
+
+.about-section p {
+  color: #444;
+  line-height: 1.7;
+  margin: 0 0 1rem 0;
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}
+
+.influences-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.influences-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  color: #444;
+  line-height: 1.6;
+}
+
+.influences-list li:last-child {
+  border-bottom: none;
+}
+
+.influences-list strong {
+  color: #8B7355;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  .about-section {
+    padding: 1.5rem;
+  }
+}

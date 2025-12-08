@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | Self in Layers</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header>
+      <div class="site-id"><strong>Self in Layers</strong></div>
+      <nav>
+        <a href="index.html" class="nav-active">Home</a>
+        <a href="archive.html">Anatomy Archive</a>
+        <a href="cabinet.html">Cabinet of Texture</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="about.html">About</a>
+        <a href="works-cited.html">Works Cited</a>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <h1>Self in Layers</h1>
+      <h2>A digital anatomy-archive & drawing study</h2>
+
+      <!-- GALLERY -->
+      <section class="gallery-freeform">
+        <div class="gallery-item-wrapper">
+          <label for="lightbox-front">
+            <img src="../Images/Front.jpg" alt="Front view" class="gallery-item gallery-item-left" />
+          </label>
+        </div>
+        <div class="gallery-item-wrapper">
+          <label for="lightbox-back">
+            <img src="../Images/Back.jpg" alt="Back view" class="gallery-item gallery-item-right" />
+          </label>
+        </div>
+      </section>
+
+      <p class="intro">Self in Layers is a digital anatomy-archive that documents figure studies through stages of observation — gesture → skeletal map → muscle overlay — preserving process marks and research notes.</p>
+    </main>
+
+    <!-- LIGHTBOX: FRONT IMAGE -->
+    <input type="checkbox" id="lightbox-front" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-front" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/Front.jpg" alt="Front view enlarged" />
+        <label for="lightbox-front" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <!-- LIGHTBOX: BACK IMAGE -->
+    <input type="checkbox" id="lightbox-back" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-back" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/Back.jpg" alt="Back view enlarged" />
+        <label for="lightbox-back" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 Self in Layers</p>
+    </footer>
+
+  </body>
+</html>
