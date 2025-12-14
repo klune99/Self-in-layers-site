@@ -13,12 +13,12 @@
     <header>
       <div class="site-id"><strong>Self in Layers</strong></div>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="archive.html" class="nav-active">Anatomy Archive</a>
-        <a href="cabinet.html">Cabinet of Anatomy</a>
-        <a href="timeline.html">Timeline</a>
-        <a href="about.html">About</a>
-        <a href="works-cited.html">Works Cited</a>
+        <a href="../index.html">Home</a>
+        <a href="../archive.html" class="nav-active">Anatomy Archive</a>
+        <a href="../cabinet.html">Cabinet of Anatomy</a>
+        <a href="../timeline.html">Timeline</a>
+        <a href="../about.html">About</a>
+        <a href="../works-cited.html">Works Cited</a>
       </nav>
     </header>
 
@@ -32,23 +32,23 @@
         <!-- FEATURED STUDY -->
         <section class="layer-viewer">
           <h3>Featured Study: Skull Anatomical Mapping</h3>
+
+          <input type="radio" name="skull-layer" id="skull-front" class="layer-radio" checked />
+          <input type="radio" name="skull-layer" id="skull-side" class="layer-radio" />
+          <input type="radio" name="skull-layer" id="skull-portrait" class="layer-radio" />
+
           <div class="layer-controls">
-            <a href="#front" class="layer-btn">Front View</a>
-            <a href="#side" class="layer-btn">Side View</a>
-            <a href="#portrait" class="layer-btn">Self Portrait Study</a>
+            <label for="skull-front" class="layer-btn">Front View</label>
+            <label for="skull-side" class="layer-btn">Side View</label>
+            <label for="skull-portrait" class="layer-btn">Self Portrait Study</label>
           </div>
-          <div class="layer-container">
-            <div id="side" class="layer">
-              <img src="../Images/Hayes_skull-side.jpg" alt="Skull side view anatomical diagram" />
-            </div>
-            <div id="portrait" class="layer">
-              <img src="../Images/Self-portrait.jpeg" alt="Self portrait with skull overlay study" />
-            </div>
-            <div id="front" class="layer">
-              <img src="../Images/Hayes_skull-front.jpg" alt="Skull front view anatomical diagram" />
-            </div>
+
+          <div class="layer-display">
+            <img src="../Images/Hayes_skull-front.jpg" alt="Skull front view anatomical diagram" class="layer-img layer-front" />
+            <img src="../Images/Hayes_skull-side.jpg" alt="Skull side view anatomical diagram" class="layer-img layer-side" />
+            <img src="../Images/Self-portrait.jpeg" alt="Self portrait with skull overlay study" class="layer-img layer-portrait" />
           </div>
-          <p class="layer-instruction">Click the buttons above to explore different views</p>
+          <p class="layer-caption">Click the buttons above to explore different views</p>
         </section>
 
         <!-- STUDY COLLECTION -->

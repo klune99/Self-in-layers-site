@@ -16,86 +16,103 @@
   border: 1px solid #ddd;
 }
 
+.layer-viewer h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.layer-radio {
+  display: none;
+}
+
 .layer-controls {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .layer-btn {
-  display: block;
-  background-color: #8B7355;
+  padding: 0.75rem 1.5rem;
+  background: #8B7355;
   color: white;
-  text-decoration: none;
-  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
   font-weight: bold;
-  border-radius: 4px;
+  transition: background 0.2s ease;
 }
 
 .layer-btn:hover {
-  background-color: #6B5335;
+  background: #6B5335;
 }
 
-.layer-instruction {
-  font-style: italic;
-  color: #666;
+.layer-caption {
   margin-top: 1rem;
+  color: #666;
+  font-style: italic;
 }
 
-/* LAYER CONTAINER */
-.layer-container {
-  background: white;
-  padding: 1rem;
-  border: 1px solid #ddd;
+/* LAYER DISPLAY */
+.layer-display {
   min-height: 400px;
+  background: white;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
   position: relative;
 }
 
-.layer {
+.layer-img {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
   display: none;
   position: absolute;
 }
 
-.layer img {
-  max-width: 100%;
-  max-height: 500px;
-  height: auto;
-}
-
 /* LAYER VISIBILITY */
-#front {
+#skull-front:checked ~ .layer-controls label[for="skull-front"],
+#skull-side:checked ~ .layer-controls label[for="skull-side"],
+#skull-portrait:checked ~ .layer-controls label[for="skull-portrait"] {
+  background: #4a3320;
+}
+
+#skull-front:checked ~ .layer-display .layer-front {
   display: block;
   position: relative;
 }
 
-#front:target,
-#side:target,
-#portrait:target {
+#skull-side:checked ~ .layer-display .layer-side {
   display: block;
   position: relative;
 }
 
-#side:target ~ #front,
-#portrait:target ~ #front {
-  display: none;
+#skull-portrait:checked ~ .layer-display .layer-portrait {
+  display: block;
+  position: relative;
 }
 
 /* STUDY COLLECTION */
 .skull-studies {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin: 2rem 0;
 }
 
 .study-card {
-  flex: 1 0 280px;
   background: #fafafa;
   border: 1px solid #ddd;
   padding: 1rem;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.study-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .study-image {
@@ -105,6 +122,7 @@
   background: white;
   border: 1px solid #eee;
   margin-bottom: 1rem;
+  flex-shrink: 0;
 }
 
 .study-title {
@@ -120,7 +138,7 @@
 
 /* SIDEBAR */
 aside {
-  padding-left: 2rem;
+  padding-left: 1.5rem;
 }
 
 aside h3 {
@@ -130,7 +148,7 @@ aside h3 {
 }
 
 aside ul {
-  padding-left: 2rem;
+  padding-left: 1.2rem;
 }
 
 aside ul li {
@@ -153,17 +171,17 @@ aside a:hover {
 }
 
 /* BACK LINK */
-.back-link {
+a.back-link {
   display: inline-block;
   margin-top: 2rem;
   padding: 0.75rem 1.5rem;
   background-color: #8B7355;
-  color: white;
+  color: white !important;
   border-radius: 5px;
   font-weight: bold;
 }
 
-.back-link:hover {
+a.back-link:hover {
   background-color: #6B5335;
   text-decoration: none;
 }
