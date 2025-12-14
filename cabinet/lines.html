@@ -13,12 +13,12 @@
     <header>
       <div class="site-id"><strong>Self in Layers</strong></div>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="archive.html" class="nav-active">Anatomy Archive</a>
-        <a href="cabinet.html">Cabinet of Anatomy</a>
-        <a href="timeline.html">Timeline</a>
-        <a href="about.html">About</a>
-        <a href="works-cited.html">Works Cited</a>
+        <a href="../index.html">Home</a>
+        <a href="../archive.html">Anatomy Archive</a>
+        <a href="../cabinet.html" class="nav-active">Cabinet of Anatomy</a>
+        <a href="../timeline.html">Timeline</a>
+        <a href="../about.html">About</a>
+        <a href="../works-cited.html">Works Cited</a>
       </nav>
     </header>
 
@@ -28,11 +28,14 @@
         <h1>Lines</h1>
         <h2>Process fragment</h2>
         <p class="intro-text" style="text-align: center;">Repetitive mark-making and gestural line studies. Lines are the fundamental building blocks of anatomical drawing.</p>
+
         <!-- STUDY COLLECTION -->
         <h2>Study Collection</h2>
         <div class="fragment-studies">
           <div class="study-card">
-            <img src="../Images/IMG_80_copy_copy.jpeg" class="study-image" alt="Colorful figure overlay" />
+            <label for="lightbox-lines1">
+              <img src="../Images/IMG_80_copy_copy.jpeg" class="study-image" alt="Colorful figure overlay" />
+            </label>
             <div class="study-title">Lines Study 01: Implied Lines</div>
             <div class="study-meta">
               Medium: Watercolor on paper<br />
@@ -41,7 +44,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_799_copy.jpeg" class="study-image" alt="Multiple gesture lines" />
+            <label for="lightbox-lines2">
+              <img src="../Images/IMG_799_copy.jpeg" class="study-image" alt="Multiple gesture lines" />
+            </label>
             <div class="study-title">Lines Study 02: Ink Lines</div>
             <div class="study-meta">
               Medium: Ink on white paper<br />
@@ -50,7 +55,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_78009.jpeg" class="study-image" alt="Red conte anatomical study" />
+            <label for="lightbox-lines3">
+              <img src="../Images/IMG_78009.jpeg" class="study-image" alt="Red conte anatomical study" />
+            </label>
             <div class="study-title">Lines Study 03: Single-Line Hatching</div>
             <div class="study-meta">
               Medium: Red conte on white paper<br />
@@ -59,16 +66,20 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_6788.jpeg" class="study-image" alt="Figure with proportion line" />
+            <label for="lightbox-lines4">
+              <img src="../Images/IMG_6788.jpeg" class="study-image" alt="Figure with proportion line" />
+            </label>
             <div class="study-title">Lines Study 04: Planar Analysis Lines</div>
             <div class="study-meta">
               Medium: Red and white conte on white paper<br />
-              Focus:Flat lines to achieve volume and proportions
+              Focus: Flat lines to achieve volume and proportions
             </div>
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_6650_copy.jpeg" class="study-image" alt="Light gestural figure" />
+            <label for="lightbox-lines5">
+              <img src="../Images/IMG_6650_copy.jpeg" class="study-image" alt="Light gestural figure" />
+            </label>
             <div class="study-title">Lines Study 05: Gesture Lines</div>
             <div class="study-meta">
               Medium: Graphite on white paper<br />
@@ -77,7 +88,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/Hand-Final_copy.jpeg" class="study-image" alt="Dark tonal figure study" />
+            <label for="lightbox-lines6">
+              <img src="../Images/Hand-Final_copy.jpeg" class="study-image" alt="Dark tonal figure study" />
+            </label>
             <div class="study-title">Lines Study 06: Variety in Lines</div>
             <div class="study-meta">
               Medium: Charcoal and red conte on white paper<br />
@@ -103,6 +116,61 @@
 
         <a href="../cabinet.html" class="back-link">← Back to Cabinet</a>
       </aside>
+    </div>
+
+    <!-- LIGHTBOXES -->
+    <input type="checkbox" id="lightbox-lines1" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-lines1" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_80_copy_copy.jpeg" alt="Lines Study 01 enlarged" />
+        <label for="lightbox-lines1" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-lines2" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-lines2" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_799_copy.jpeg" alt="Lines Study 02 enlarged" />
+        <label for="lightbox-lines2" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-lines3" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-lines3" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_78009.jpeg" alt="Lines Study 03 enlarged" />
+        <label for="lightbox-lines3" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-lines4" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-lines4" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_6788.jpeg" alt="Lines Study 04 enlarged" />
+        <label for="lightbox-lines4" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-lines5" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-lines5" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_6650_copy.jpeg" alt="Lines Study 05 enlarged" />
+        <label for="lightbox-lines5" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-lines6" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-lines6" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/Hand-Final_copy.jpeg" alt="Lines Study 06 enlarged" />
+        <label for="lightbox-lines6" class="lightbox-close-btn">&times;</label>
+      </div>
     </div>
 
     <!-- FOOTER -->

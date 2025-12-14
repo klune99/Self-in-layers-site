@@ -13,12 +13,12 @@
     <header>
       <div class="site-id"><strong>Self in Layers</strong></div>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="archive.html" class="nav-active">Anatomy Archive</a>
-        <a href="cabinet.html">Cabinet of Anatomy</a>
-        <a href="timeline.html">Timeline</a>
-        <a href="about.html">About</a>
-        <a href="works-cited.html">Works Cited</a>
+        <a href="../index.html">Home</a>
+        <a href="../archive.html">Anatomy Archive</a>
+        <a href="../cabinet.html" class="nav-active">Cabinet of Anatomy</a>
+        <a href="../timeline.html">Timeline</a>
+        <a href="../about.html">About</a>
+        <a href="../works-cited.html">Works Cited</a>
       </nav>
     </header>
 
@@ -33,7 +33,9 @@
         <h2>Study Collection</h2>
         <div class="fragment-studies">
           <div class="study-card">
-            <img src="../Images/IMG_66605.jpeg" class="study-image" alt="Colored pencil figure studies" />
+            <label for="lightbox-medium1">
+              <img src="../Images/IMG_66605.jpeg" class="study-image" alt="Colored pencil figure studies" />
+            </label>
             <div class="study-title">Medium Study 01: Colored Pencil</div>
             <div class="study-meta">
               Medium: Colored pencil on white paper<br />
@@ -42,7 +44,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_80_copy_copy.jpeg" class="study-image" alt="Oil pastel and acrylic figure" />
+            <label for="lightbox-medium2">
+              <img src="../Images/IMG_80_copy_copy.jpeg" class="study-image" alt="Oil pastel and acrylic figure" />
+            </label>
             <div class="study-title">Medium Study 02: Watercolor</div>
             <div class="study-meta">
               Medium: Watercolor on paper<br />
@@ -51,7 +55,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_799_copy.jpeg" class="study-image" alt="Graphite gesture study" />
+            <label for="lightbox-medium3">
+              <img src="../Images/IMG_799_copy.jpeg" class="study-image" alt="Graphite gesture study" />
+            </label>
             <div class="study-title">Medium Study 03: Ink</div>
             <div class="study-meta">
               Medium: Graphite on white paper<br />
@@ -60,7 +66,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_73182.jpeg" class="study-image" alt="Conte figure study" />
+            <label for="lightbox-medium4">
+              <img src="../Images/IMG_73182.jpeg" class="study-image" alt="Conte figure study" />
+            </label>
             <div class="study-title">Medium Study 04: Conte</div>
             <div class="study-meta">
               Medium: Conte on toned paper<br />
@@ -69,7 +77,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7640.jpeg" class="study-image" alt="Blue oil pastel skeleton overlay" />
+            <label for="lightbox-medium5">
+              <img src="../Images/IMG_7640.jpeg" class="study-image" alt="Blue oil pastel skeleton overlay" />
+            </label>
             <div class="study-title">Medium Study 05: Oil Pastel</div>
             <div class="study-meta">
               Medium: Oil pastel on craft paper<br />
@@ -78,7 +88,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/Self-portrait.jpeg" class="study-image" alt="Self portrait sketch" />
+            <label for="lightbox-medium6">
+              <img src="../Images/Self-portrait.jpeg" class="study-image" alt="Self portrait sketch" />
+            </label>
             <div class="study-title">Medium Study 06: Mixed Drawing Media</div>
             <div class="study-meta">
               Medium: Graphite and red marker on paper<br />
@@ -87,7 +99,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7599.jpeg" class="study-image" alt="Charcoal figure study" />
+            <label for="lightbox-medium7">
+              <img src="../Images/IMG_7599.jpeg" class="study-image" alt="Charcoal figure study" />
+            </label>
             <div class="study-title">Medium Study 07: Graphite and Acrylic</div>
             <div class="study-meta">
               Medium: Graphite on acrylic on craft paper<br />
@@ -102,7 +116,7 @@
         <h3>Medium Metadata</h3>
         <ul>
           <li><strong>Type:</strong> Drawing materials</li>
-          <li><strong>Varieties:</strong> Graphite, watercolor,ink, conte, oil pastel, and acrylic</li>
+          <li><strong>Varieties:</strong> Graphite, watercolor, ink, conte, oil pastel, and acrylic</li>
           <li><strong>Application:</strong> Dry and wet media techniques</li>
           <li><strong>Studies:</strong> 7</li>
         </ul>
@@ -112,6 +126,70 @@
 
         <a href="../cabinet.html" class="back-link">← Back to Cabinet</a>
       </aside>
+    </div>
+
+    <!-- LIGHTBOXES -->
+    <input type="checkbox" id="lightbox-medium1" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-medium1" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_66605.jpeg" alt="Medium Study 01 enlarged" />
+        <label for="lightbox-medium1" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-medium2" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-medium2" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_80_copy_copy.jpeg" alt="Medium Study 02 enlarged" />
+        <label for="lightbox-medium2" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-medium3" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-medium3" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_799_copy.jpeg" alt="Medium Study 03 enlarged" />
+        <label for="lightbox-medium3" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-medium4" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-medium4" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_73182.jpeg" alt="Medium Study 04 enlarged" />
+        <label for="lightbox-medium4" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-medium5" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-medium5" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7640.jpeg" alt="Medium Study 05 enlarged" />
+        <label for="lightbox-medium5" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-medium6" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-medium6" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/Self-portrait.jpeg" alt="Medium Study 06 enlarged" />
+        <label for="lightbox-medium6" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-medium7" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-medium7" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7599.jpeg" alt="Medium Study 07 enlarged" />
+        <label for="lightbox-medium7" class="lightbox-close-btn">&times;</label>
+      </div>
     </div>
 
     <!-- FOOTER -->

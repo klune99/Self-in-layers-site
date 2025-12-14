@@ -13,12 +13,12 @@
     <header>
       <div class="site-id"><strong>Self in Layers</strong></div>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="archive.html" class="nav-active">Anatomy Archive</a>
-        <a href="cabinet.html">Cabinet of Anatomy</a>
-        <a href="timeline.html">Timeline</a>
-        <a href="about.html">About</a>
-        <a href="works-cited.html">Works Cited</a>
+        <a href="../index.html">Home</a>
+        <a href="../archive.html">Anatomy Archive</a>
+        <a href="../cabinet.html" class="nav-active">Cabinet of Anatomy</a>
+        <a href="../timeline.html">Timeline</a>
+        <a href="../about.html">About</a>
+        <a href="../works-cited.html">Works Cited</a>
       </nav>
     </header>
 
@@ -33,7 +33,9 @@
         <h2>Study Collection</h2>
         <div class="fragment-studies">
           <div class="study-card">
-            <img src="../Images/IMG_765_copy.jpeg" class="study-image" alt="Toned paper figure study" />
+            <label for="lightbox-paper1">
+              <img src="../Images/IMG_765_copy.jpeg" class="study-image" alt="Toned paper figure study" />
+            </label>
             <div class="study-title">Paper Study 01: Craft Paper</div>
             <div class="study-meta">
               Medium: Graphite on craft paper<br />
@@ -42,16 +44,20 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_73182.jpeg" class="study-image" alt="Seated figure study" />
+            <label for="lightbox-paper2">
+              <img src="../Images/IMG_73182.jpeg" class="study-image" alt="Seated figure study" />
+            </label>
             <div class="study-title">Paper Study 02: Stonehenge Paper</div>
             <div class="study-meta">
               Medium: Black and white conte on grey paper<br />
-              Focus: Proportions, values and 
+              Focus: Proportions and values
             </div>
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7991.jpeg" class="study-image" alt="Figure composition study" />
+            <label for="lightbox-paper3">
+              <img src="../Images/IMG_7991.jpeg" class="study-image" alt="Figure composition study" />
+            </label>
             <div class="study-title">Paper Study 03: Strathmore Paper</div>
             <div class="study-meta">
               Medium: Ink on white paper<br />
@@ -60,7 +66,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_6688.jpeg" class="study-image" alt="Sketch studies on white paper" />
+            <label for="lightbox-paper4">
+              <img src="../Images/IMG_6688.jpeg" class="study-image" alt="Sketch studies on white paper" />
+            </label>
             <div class="study-title">Paper Study 04: Sketch Paper</div>
             <div class="study-meta">
               Medium: Graphite on white sketch paper<br />
@@ -69,8 +77,10 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_733.jpeg" class="study-image" alt="Torso study on white paper" />
-            <div class="study-title">Paper Studu 05: Translucent Paper</div>
+            <label for="lightbox-paper5">
+              <img src="../Images/IMG_733.jpeg" class="study-image" alt="Torso study on white paper" />
+            </label>
+            <div class="study-title">Paper Study 05: Translucent Paper</div>
             <div class="study-meta">
               Medium: Graphite on translucent paper<br />
               Focus: Details on the muscles
@@ -85,7 +95,7 @@
         <h3>Paper Metadata</h3>
         <ul>
           <li><strong>Type:</strong> Drawing surfaces</li>
-          <li><strong>Varieties:</strong> White,brown, grey, lined, translucent</li>
+          <li><strong>Varieties:</strong> White, brown, grey, lined, translucent</li>
           <li><strong>Textures:</strong> Smooth, rough</li>
           <li><strong>Weights:</strong> Sketch to heavyweight</li>
           <li><strong>Studies:</strong> 5</li>
@@ -96,6 +106,52 @@
 
         <a href="../cabinet.html" class="back-link">← Back to Cabinet</a>
       </aside>
+    </div>
+
+    <!-- LIGHTBOXES -->
+    <input type="checkbox" id="lightbox-paper1" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-paper1" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_765_copy.jpeg" alt="Paper Study 01 enlarged" />
+        <label for="lightbox-paper1" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-paper2" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-paper2" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_73182.jpeg" alt="Paper Study 02 enlarged" />
+        <label for="lightbox-paper2" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-paper3" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-paper3" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7991.jpeg" alt="Paper Study 03 enlarged" />
+        <label for="lightbox-paper3" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-paper4" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-paper4" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_6688.jpeg" alt="Paper Study 04 enlarged" />
+        <label for="lightbox-paper4" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-paper5" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-paper5" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_733.jpeg" alt="Paper Study 05 enlarged" />
+        <label for="lightbox-paper5" class="lightbox-close-btn">&times;</label>
+      </div>
     </div>
 
     <!-- FOOTER -->
