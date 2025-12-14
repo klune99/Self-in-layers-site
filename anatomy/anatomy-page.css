@@ -1,4 +1,4 @@
-/* ===== ARMS PAGE STYLES ===== */
+/* ===== ANATOMY PAGE STYLES ===== */
 
 /* INTRO TEXT */
 .intro-text {
@@ -71,30 +71,56 @@
   position: absolute;
 }
 
-/* LAYER VISIBILITY */
-#arm-front:checked ~ .layer-controls label[for="arm-front"],
-#arm-back:checked ~ .layer-controls label[for="arm-back"],
-#arm-featured:checked ~ .layer-controls label[for="arm-featured"] {
+/* LAYER VISIBILITY - ACTIVE BUTTON HIGHLIGHT */
+.layer-radio:checked + .layer-radio + .layer-radio + .layer-controls label,
+input[id$="-front"]:checked ~ .layer-controls label[for$="-front"],
+input[id$="-back"]:checked ~ .layer-controls label[for$="-back"],
+input[id$="-side"]:checked ~ .layer-controls label[for$="-side"],
+input[id$="-portrait"]:checked ~ .layer-controls label[for$="-portrait"],
+input[id$="-skeletal"]:checked ~ .layer-controls label[for$="-skeletal"],
+input[id$="-muscle"]:checked ~ .layer-controls label[for$="-muscle"],
+input[id$="-both"]:checked ~ .layer-controls label[for$="-both"],
+input[id$="-gesture"]:checked ~ .layer-controls label[for$="-gesture"],
+input[id$="-featured"]:checked ~ .layer-controls label[for$="-featured"] {
   background: #4a3320;
 }
 
-#arm-front:checked ~ .layer-display .layer-front {
+/* LAYER VISIBILITY - SHOW IMAGES */
+input[id$="-front"]:checked ~ .layer-display .layer-front,
+input[id$="-back"]:checked ~ .layer-display .layer-back,
+input[id$="-side"]:checked ~ .layer-display .layer-side,
+input[id$="-portrait"]:checked ~ .layer-display .layer-portrait,
+input[id$="-skeletal"]:checked ~ .layer-display .layer-skeletal,
+input[id$="-muscle"]:checked ~ .layer-display .layer-muscle,
+input[id$="-both"]:checked ~ .layer-display .layer-both,
+input[id$="-gesture"]:checked ~ .layer-display .layer-gesture,
+input[id$="-featured"]:checked ~ .layer-display .layer-featured {
   display: block;
   position: relative;
 }
 
-#arm-back:checked ~ .layer-display .layer-back {
-  display: block;
-  position: relative;
+/* LEGS DUAL IMAGE */
+.layer-featured-dual {
+  display: none;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-#arm-featured:checked ~ .layer-display .layer-featured {
-  display: block;
+.layer-featured-dual img {
+  max-width: 48%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+input[id$="-featured"]:checked ~ .layer-display .layer-featured-dual {
+  display: flex;
   position: relative;
 }
 
 /* STUDY COLLECTION */
-.arms-studies {
+.study-collection {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
