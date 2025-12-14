@@ -72,7 +72,6 @@
 }
 
 /* LAYER VISIBILITY - ACTIVE BUTTON HIGHLIGHT */
-.layer-radio:checked + .layer-radio + .layer-radio + .layer-controls label,
 input[id$="-front"]:checked ~ .layer-controls label[for$="-front"],
 input[id$="-back"]:checked ~ .layer-controls label[for$="-back"],
 input[id$="-side"]:checked ~ .layer-controls label[for$="-side"],
@@ -141,6 +140,11 @@ input[id$="-featured"]:checked ~ .layer-display .layer-featured-dual {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+.study-card label {
+  cursor: pointer;
+  display: block;
+}
+
 .study-image {
   width: 100%;
   height: 300px;
@@ -149,6 +153,12 @@ input[id$="-featured"]:checked ~ .layer-display .layer-featured-dual {
   border: 1px solid #eee;
   margin-bottom: 1rem;
   flex-shrink: 0;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.study-image:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .study-title {
@@ -210,4 +220,69 @@ a.back-link {
 a.back-link:hover {
   background-color: #6B5335;
   text-decoration: none;
+}
+
+/* LIGHTBOX */
+.lightbox-toggle {
+  display: none;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-toggle:checked + .lightbox {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  z-index: 1001;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.lightbox-close-btn:hover {
+  color: #ccc;
 }

@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Arms | Self in Layers</title>
-    <meta name="description" content="Self in Layers — a digital anatomy-archive of figure studies with gesture, skeleton, and muscle overlays." />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="anatomy-page.css" />
   </head>
@@ -13,7 +12,7 @@
     <!-- HEADER -->
     <header>
       <div class="site-id"><strong>Self in Layers</strong></div>
-      <nav aria-label="Primary">
+      <nav>
         <a href="../index.html">Home</a>
         <a href="../archive.html" class="nav-active">Anatomy Archive</a>
         <a href="../cabinet.html">Cabinet of Anatomy</a>
@@ -34,7 +33,6 @@
         <section class="layer-viewer">
           <h3>Featured Study: Arms Anatomical Mapping</h3>
 
-          <!-- Radio buttons for CSS layer switching -->
           <input type="radio" name="arm-layer" id="arm-front" class="layer-radio" checked />
           <input type="radio" name="arm-layer" id="arm-back" class="layer-radio" />
           <input type="radio" name="arm-layer" id="arm-featured" class="layer-radio" />
@@ -57,7 +55,9 @@
         <h2>Study Collection</h2>
         <div class="study-collection">
           <div class="study-card">
-            <img src="../Images/IMG_6589_.jpeg" class="study-image" alt="Figure gesture study" />
+            <label for="lightbox-arms1">
+              <img src="../Images/IMG_6589_.jpeg" class="study-image" alt="Figure gesture study" />
+            </label>
             <div class="study-title">Arm Study 01: Figure Gesture</div>
             <div class="study-meta">
               Medium: Red conte on paper<br />
@@ -66,7 +66,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7494-3.jpeg" class="study-image" alt="Arm muscle detail" />
+            <label for="lightbox-arms2">
+              <img src="../Images/IMG_7494-3.jpeg" class="study-image" alt="Arm muscle detail" />
+            </label>
             <div class="study-title">Arm Study 02: Muscle Detail</div>
             <div class="study-meta">
               Medium: Black and white conte on toned paper<br />
@@ -75,7 +77,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7494-2.jpeg" class="study-image" alt="Forearm study" />
+            <label for="lightbox-arms3">
+              <img src="../Images/IMG_7494-2.jpeg" class="study-image" alt="Forearm study" />
+            </label>
             <div class="study-title">Arm Study 03: Forearm Analysis</div>
             <div class="study-meta">
               Medium: Black and white conte on toned paper<br />
@@ -84,7 +88,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7722.png" class="study-image" alt="Arm skeletal mapping" />
+            <label for="lightbox-arms4">
+              <img src="../Images/IMG_7722.png" class="study-image" alt="Arm skeletal mapping" />
+            </label>
             <div class="study-title">Arm Study 04: Skeletal Mapping</div>
             <div class="study-meta">
               Medium: Graphite on tracing paper<br />
@@ -93,7 +99,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7723.png" class="study-image" alt="Arm gesture lines" />
+            <label for="lightbox-arms5">
+              <img src="../Images/IMG_7723.png" class="study-image" alt="Arm gesture lines" />
+            </label>
             <div class="study-title">Arm Study 05: Gesture Lines</div>
             <div class="study-meta">
               Medium: Graphite on tracing paper<br />
@@ -102,7 +110,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7701.png" class="study-image" alt="Full figure with arm overlay" />
+            <label for="lightbox-arms6">
+              <img src="../Images/IMG_7701.png" class="study-image" alt="Full figure with arm overlay" />
+            </label>
             <div class="study-title">Arm Study 06: Full Figure Context</div>
             <div class="study-meta">
               Medium: Acrylic paint and oil pastels on toned paper<br />
@@ -111,7 +121,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7719.png" class="study-image" alt="Shoulder and arm study" />
+            <label for="lightbox-arms7">
+              <img src="../Images/IMG_7719.png" class="study-image" alt="Shoulder and arm study" />
+            </label>
             <div class="study-title">Arm Study 07: Shoulder Connection</div>
             <div class="study-meta">
               Medium: Acrylic paint and oil pastels on toned paper<br />
@@ -137,6 +149,70 @@
 
         <a href="../archive.html" class="back-link">← Back to Archive</a>
       </aside>
+    </div>
+
+    <!-- LIGHTBOXES -->
+    <input type="checkbox" id="lightbox-arms1" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-arms1" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_6589_.jpeg" alt="Arm Study 01 enlarged" />
+        <label for="lightbox-arms1" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-arms2" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-arms2" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7494-3.jpeg" alt="Arm Study 02 enlarged" />
+        <label for="lightbox-arms2" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-arms3" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-arms3" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7494-2.jpeg" alt="Arm Study 03 enlarged" />
+        <label for="lightbox-arms3" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-arms4" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-arms4" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7722.png" alt="Arm Study 04 enlarged" />
+        <label for="lightbox-arms4" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-arms5" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-arms5" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7723.png" alt="Arm Study 05 enlarged" />
+        <label for="lightbox-arms5" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-arms6" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-arms6" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7701.png" alt="Arm Study 06 enlarged" />
+        <label for="lightbox-arms6" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-arms7" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-arms7" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7719.png" alt="Arm Study 07 enlarged" />
+        <label for="lightbox-arms7" class="lightbox-close-btn">&times;</label>
+      </div>
     </div>
 
     <!-- FOOTER -->

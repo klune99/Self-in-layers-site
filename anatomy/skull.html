@@ -55,7 +55,9 @@
         <h2>Study Collection</h2>
         <div class="study-collection">
           <div class="study-card">
-            <img src="../Images/wk2.jpeg" class="study-image" alt="Mass gestural drawing of skull" />
+            <label for="lightbox-skull1">
+              <img src="../Images/wk2.jpeg" class="study-image" alt="Mass gestural drawing of skull" />
+            </label>
             <div class="study-title">Skull Study 01: Mass Gestural Drawing</div>
             <div class="study-meta">
               Medium: Red conte on white paper<br />
@@ -64,7 +66,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/wk4-1.jpeg" class="study-image" alt="Gestural skull drawing, front view" />
+            <label for="lightbox-skull2">
+              <img src="../Images/wk4-1.jpeg" class="study-image" alt="Gestural skull drawing, front view" />
+            </label>
             <div class="study-title">Skull Study 02: Gestural Continuation</div>
             <div class="study-meta">
               Medium: Red and black conte on white paper<br />
@@ -73,7 +77,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/wk4-2.jpeg" class="study-image" alt="Gestural skull drawing, back view" />
+            <label for="lightbox-skull3">
+              <img src="../Images/wk4-2.jpeg" class="study-image" alt="Gestural skull drawing, back view" />
+            </label>
             <div class="study-title">Skull Study 03: Back View Gesture</div>
             <div class="study-meta">
               Medium: Red and black conte on white paper<br />
@@ -82,7 +88,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/Front-skull.png" class="study-image" alt="Skull overlay on head, front view" />
+            <label for="lightbox-skull4">
+              <img src="../Images/Front-skull.png" class="study-image" alt="Skull overlay on head, front view" />
+            </label>
             <div class="study-title">Skull Study 04: Front Overlay</div>
             <div class="study-meta">
               Medium: Blue oil pastel and white acrylic on brown paper<br />
@@ -91,7 +99,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/Back-skull.png" class="study-image" alt="Skull overlay on head, back view" />
+            <label for="lightbox-skull5">
+              <img src="../Images/Back-skull.png" class="study-image" alt="Skull overlay on head, back view" />
+            </label>
             <div class="study-title">Skull Study 05: Back Overlay</div>
             <div class="study-meta">
               Medium: Blue oil pastel and white acrylic on brown paper<br />
@@ -117,6 +127,52 @@
 
         <a href="../archive.html" class="back-link">← Back to Archive</a>
       </aside>
+    </div>
+
+    <!-- LIGHTBOXES -->
+    <input type="checkbox" id="lightbox-skull1" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-skull1" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/wk2.jpeg" alt="Skull Study 01 enlarged" />
+        <label for="lightbox-skull1" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-skull2" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-skull2" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/wk4-1.jpeg" alt="Skull Study 02 enlarged" />
+        <label for="lightbox-skull2" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-skull3" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-skull3" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/wk4-2.jpeg" alt="Skull Study 03 enlarged" />
+        <label for="lightbox-skull3" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-skull4" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-skull4" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/Front-skull.png" alt="Skull Study 04 enlarged" />
+        <label for="lightbox-skull4" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-skull5" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-skull5" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/Back-skull.png" alt="Skull Study 05 enlarged" />
+        <label for="lightbox-skull5" class="lightbox-close-btn">&times;</label>
+      </div>
     </div>
 
     <!-- FOOTER -->

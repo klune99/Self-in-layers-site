@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Legs | Self in Layers</title>
-    <meta name="description" content="Self in Layers — a digital anatomy-archive of figure studies with gesture, skeleton, and muscle overlays." />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="anatomy-page.css" />
   </head>
@@ -13,7 +12,7 @@
     <!-- HEADER -->
     <header>
       <div class="site-id"><strong>Self in Layers</strong></div>
-      <nav aria-label="Primary">
+      <nav>
         <a href="../index.html">Home</a>
         <a href="../archive.html" class="nav-active">Anatomy Archive</a>
         <a href="../cabinet.html">Cabinet of Anatomy</a>
@@ -34,7 +33,6 @@
         <section class="layer-viewer">
           <h3>Featured Study: Legs Anatomical Mapping</h3>
 
-          <!-- Radio buttons for CSS layer switching -->
           <input type="radio" name="leg-layer" id="leg-front" class="layer-radio" checked />
           <input type="radio" name="leg-layer" id="leg-back" class="layer-radio" />
           <input type="radio" name="leg-layer" id="leg-featured" class="layer-radio" />
@@ -60,7 +58,9 @@
         <h2>Study Collection</h2>
         <div class="study-collection">
           <div class="study-card">
-            <img src="../Images/IMG_6650.jpeg" class="study-image" alt="Figure gesture study" />
+            <label for="lightbox-legs1">
+              <img src="../Images/IMG_6650.jpeg" class="study-image" alt="Figure gesture study" />
+            </label>
             <div class="study-title">Leg Study 01: Figure Gesture</div>
             <div class="study-meta">
               Medium: Black conte on white paper<br />
@@ -69,7 +69,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7319.jpeg" class="study-image" alt="Reclining figure study" />
+            <label for="lightbox-legs2">
+              <img src="../Images/IMG_7319.jpeg" class="study-image" alt="Reclining figure study" />
+            </label>
             <div class="study-title">Leg Study 02: Reclining Figure</div>
             <div class="study-meta">
               Medium: Black and white conte on toned paper<br />
@@ -78,7 +80,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7495.jpeg" class="study-image" alt="Leg muscle detail" />
+            <label for="lightbox-legs3">
+              <img src="../Images/IMG_7495.jpeg" class="study-image" alt="Leg muscle detail" />
+            </label>
             <div class="study-title">Leg Study 03: Muscle Detail</div>
             <div class="study-meta">
               Medium: Black and white conte on toned paper<br />
@@ -87,7 +91,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7555.jpeg" class="study-image" alt="Anatomical leg study" />
+            <label for="lightbox-legs4">
+              <img src="../Images/IMG_7555.jpeg" class="study-image" alt="Anatomical leg study" />
+            </label>
             <div class="study-title">Leg Study 04: Anatomical Reference</div>
             <div class="study-meta">
               Medium: Red conte on white paper<br />
@@ -96,7 +102,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7751.jpeg" class="study-image" alt="Leg muscle overlay" />
+            <label for="lightbox-legs5">
+              <img src="../Images/IMG_7751.jpeg" class="study-image" alt="Leg muscle overlay" />
+            </label>
             <div class="study-title">Leg Study 05: Muscle Overlay</div>
             <div class="study-meta">
               Medium: Red conte on white paper<br />
@@ -105,7 +113,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7720.png" class="study-image" alt="Leg skeletal mapping" />
+            <label for="lightbox-legs6">
+              <img src="../Images/IMG_7720.png" class="study-image" alt="Leg skeletal mapping" />
+            </label>
             <div class="study-title">Leg Study 06: Skeletal Mapping</div>
             <div class="study-meta">
               Medium: Graphite on tracing paper<br />
@@ -114,7 +124,9 @@
           </div>
 
           <div class="study-card">
-            <img src="../Images/IMG_7721.png" class="study-image" alt="Leg gesture lines" />
+            <label for="lightbox-legs7">
+              <img src="../Images/IMG_7721.png" class="study-image" alt="Leg gesture lines" />
+            </label>
             <div class="study-title">Leg Study 07: Gesture Lines</div>
             <div class="study-meta">
               Medium: Graphite on tracing paper<br />
@@ -140,6 +152,70 @@
 
         <a href="../archive.html" class="back-link">← Back to Archive</a>
       </aside>
+    </div>
+
+    <!-- LIGHTBOXES -->
+    <input type="checkbox" id="lightbox-legs1" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-legs1" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_6650.jpeg" alt="Leg Study 01 enlarged" />
+        <label for="lightbox-legs1" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-legs2" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-legs2" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7319.jpeg" alt="Leg Study 02 enlarged" />
+        <label for="lightbox-legs2" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-legs3" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-legs3" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7495.jpeg" alt="Leg Study 03 enlarged" />
+        <label for="lightbox-legs3" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-legs4" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-legs4" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7555.jpeg" alt="Leg Study 04 enlarged" />
+        <label for="lightbox-legs4" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-legs5" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-legs5" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7751.jpeg" alt="Leg Study 05 enlarged" />
+        <label for="lightbox-legs5" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-legs6" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-legs6" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7720.png" alt="Leg Study 06 enlarged" />
+        <label for="lightbox-legs6" class="lightbox-close-btn">&times;</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="lightbox-legs7" class="lightbox-toggle" />
+    <div class="lightbox">
+      <label for="lightbox-legs7" class="lightbox-close"></label>
+      <div class="lightbox-content">
+        <img src="../Images/IMG_7721.png" alt="Leg Study 07 enlarged" />
+        <label for="lightbox-legs7" class="lightbox-close-btn">&times;</label>
+      </div>
     </div>
 
     <!-- FOOTER -->
